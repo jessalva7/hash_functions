@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  go-hash-server:
+    restart: always
+    ports:
+      - 9370:9370
+    build:
+      context: hash_server/
+      dockerfile: Dockerfile
+    environment:
+      - SERVER_PORT=:9370
